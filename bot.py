@@ -14,6 +14,7 @@ class Bot:
         self.dispatcher.add_handler(CommandHandler('start', self.start_command))
         print('Bot started...')
         self.updater.start_polling()
+        self.updater.idle()
 
     def start_command(self, update, context):
         for description in self.descriptions:
