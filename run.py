@@ -9,6 +9,7 @@ from modules.what_eat.module import chose_food_module
 from modules.hackernews.module import hackernews_module
 from modules.vacancies.module import random_vacancy_module
 #from modules.film_generator.module import generate_film_module
+from modules.holliday_generator.module import public_holiday_module
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -24,6 +25,7 @@ bot.register(hackernews_module, ['hackernews',"news","новости","каки�
 bot.register(random_vacancy_module, ['Вакансия','Вакансии','Вакансии Курск', 'вакансия'], "А если напишешь мне 'вакансия' - я постараюсь найти вакансию твоей мечты в Норбит!")
 bot.register(generate_news_module, ['Новость','новость','новости', 'Новости'], "А если напишешь мне 'новость' - я расскажу тебе последнюю новость в России!")
 #bot.register(generate_film_module, ['Фильм','фильм','Кино', 'Фильмы'], "А если напишешь мне 'фильм' - я предложу тебе фильм!")
+bot.register(public_holiday_module, ['Праздник','праздники','Праздники', 'праздник'], "А если напишешь мне 'праздник' - я скажу тебе какой сегодня праздник!")
 
 bot.run()
 
